@@ -10,16 +10,14 @@
 
 <meta name="apple-mobile-web-app-title" content="">
 
-<link rel="icon" href="t.png" sizes="32x32" />
-    <link rel="icon" href="t.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="t.png" />
+
+
+<link rel="icon" href="t.PNG" sizes="32x32" />
+    <link rel="icon" href="t.PNG" sizes="192x192" />
+    <link rel="apple-touch-icon" href="t.PNG" />
+    
+
   <title>PEDPHAIRIN Developper</title>
-
-
-   
-
-
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   
@@ -47,67 +45,56 @@ body{
   
  
 }
-.container{
-
-
-
-  height:100%;
- position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+  width: auto;
+  display: flex;
+  flex-direction: column;
 }
+
 .btn {
-    margin-top: calc(50% + 25px);
-    position: relative;
-    display: inline-block;
-    width: 277px;
-    height: 50px;
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: transparent;
-    cursor: pointer;
-    text-decoration:none;
-    font-family: 'Roboto', sans-serif;
-    font-weight:900;
-    font-size:17px;
-    letter-spacing: 0.045em;
+  margin: 20px auto;
+  border: none;
+  padding: 10px 44px;
+  font-size: 36px;
+  position: relative;
+}
+.btn::before {
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn .btn-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+.btn:hover::before {
+  background: black;
+  width: 100%;
+}
+.btn.rounded {
+  border-radius: 50px;
+}
+.btn.rounded .text-green {
+  color: #00F0B5;
+  mix-blend-mode: difference;
+}
+.btn.rounded::before {
+  border-radius: 50px;
+  width: 25%;
+  background: #00F0B5;
+}
+.btn.rounded:hover::before {
+  background: #00F0B5;
+  width: 100%;
 }
 
-.btn svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-.btn svg rect {
-    //stroke: #EC0033;
-    stroke-width: 4;
-    stroke-dasharray: 353, 0;
-    stroke-dashoffset: 0;
-    -webkit-transition: all 600ms ease;
-    transition: all 600ms ease;
-}
 
-.btn span{
-  background: rgb(255,130,130);
-  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
-  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.btn:hover svg rect {
-    stroke-width: 4;
-    stroke-dasharray: 196, 543;
-    stroke-dashoffset: 437;
-}
 /** 
 code by WebDevTrick (https://webdevtrick.com)
 **/
@@ -227,6 +214,17 @@ h1 {
     window.parent.postMessage("resize", "*");
   }
 </script>
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
 
 
 </head>
@@ -236,20 +234,15 @@ h1 {
       <h1><span class="blink-01">🙂Wellcome to</span><span class="blink-02">Pedphairin Web.</span></h1>
     </div>
   <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
-<div class="container">
+
+<body translate="no" >
+  <div class="container">
+    <a href="Song.html" class="btn">
+  <button class="btn"><span class="btn-text">C💖VER BY ME</span></button></a>
+ 
   <a href="track.html" class="btn">
-  <svg width="277" height="62">
-    <defs>
-        <linearGradient id="grad1">
-            <stop offset="0%" stop-color="#FF8282"/>
-            <stop offset="100%" stop-color="#E178ED" />
-        </linearGradient>
-    </defs>
-     <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
-  </svg>
-  <!--<span>Voir mes réalisations</span>-->
-    <span>CLICK ME NOW💖 💖 !</span>
-</a>
+  <button class="btn rounded"><span class="text-green">BACKING TR🔥CK</span></button></a>
+</div>
 </div>
   
   
