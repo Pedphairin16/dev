@@ -8,47 +8,211 @@
   <meta charset="UTF-8">
   
 
+<meta name="apple-mobile-web-app-title" content="">
 
-  <title>💖 Thai website</title>
-  
+
+
+<link rel="icon" href="t.PNG" sizes="32x32" />
+    <link rel="icon" href="t.PNG" sizes="192x192" />
+    <link rel="apple-touch-icon" href="P-Icon.png" />
+    <meta name="msapplication-TileImage" content="" />
+
+
+  <title>PEDPHAIRIN Developper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   
   
 <style>
-
-
-.container {
- width: 100%;
-	height: 50vh;
-	display: flex;
-  flex-direction:column;
-	align-items: center;
-	justify-content: center;
-  font-size: 3vh;
-  font-family: 'Oswald', sans-serif;
-font-family: 'Supermercado One', cursive;
-  text-transform:uppercase;
+body{
+  width: 100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    black url('tk8.jpg') 50% 50% no-repeat;
+   //background: 
+     linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+     rgba(220, 220, 220, 1) url('tk8.jpg') 50% 50% no-repeat;
+  //background-blend-mode: exclusion;
+  background-blend-mode: luminosity;
+  
  
- }
-.container h1 {
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.container{
+
+
+
+  height:100%;
+ position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn {
+    margin-top: calc(50% + 25px);
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight:900;
+    font-size:17px;
+    letter-spacing: 0.045em;
+}
+
+.btn svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn svg rect {
+    //stroke: #EC0033;
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.btn span{
+  background: rgb(255,130,130);
+  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all .2s;
-}
-.container p {
-  font-size: 8vh;
-   text-transform:lowercase;
-  font-weight:bold;
-  background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color:transparent;
-}
-.container h1:hover {
-  background-image: linear-gradient(43deg, #FFCC70  0%, #C850C0 46%, #4158D0 100%);
-  transform:scale(1.2);
 }
 
+.btn:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+/** 
+code by WebDevTrick (https://webdevtrick.com)
+**/
+  
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+}
+h1 {
+  font-size: 4rem;
+}
+.blink-01 {
+  position: relative;
+  animation: blink01 1s infinite alternate;
+}
+.blink-01::before {
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  filter: blur(40px);
+  width: 100%;
+  height: 100%;
+  content: '';
+  animation: bg_blink01 1s infinite alternate;
+}
+.blink-01::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(20px);
+  content: 'Blinking';
+  animation: blink01 1s infinite alternate;
+}
+.blink-02 {
+  position: relative;
+  animation: blink02 1s infinite alternate;
+}
+.blink-02::before {
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  filter: blur(40px);
+  width: 100%;
+  height: 100%;
+  content: '';
+  animation: bg_blink02 1s infinite alternate;
+}
+.blink-02::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(20px);
+  content: 'Text';
+  animation: blink02 1s infinite alternate;
+}
+@keyframes blink01 {
+ 0% {
+   color: #efc137;
+ }
+ 100% {
+   color: #bafff4;
+ }
+}
+@keyframes blink02 {
+ 0% {
+   color: #bafff4;
+ }
+ 100% {
+   color: #efc137;
+ }
+}
+@keyframes bg_blink01 {
+ 0% {
+   filter: blur(40px);
+   background-color: #efc137;
+ }
+ 100% {
+   filter: blur(40px);
+   background-color: #bafff4;
+ }
+}
+@keyframes bg_blink02 {
+ 0% {
+   filter: blur(40px);
+   background-color: #bafff4;
+ }
+ 100% {
+   filter: blur(40px);
+   background-color: #efc137;
+ }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
 </style>
 
   <script>
@@ -67,13 +231,25 @@ font-family: 'Supermercado One', cursive;
 </head>
 
 <body translate="no" >
-  <div class="container">
-    <p>HELLO (💖 ) SISTER</p>
-  <a href="https://online.pubhtml5.com/unit/nydl/"><h1>💖 Click to start learning 💖</h1> </a>
-  
-  
+  <div id="container">
+      <h1><span class="blink-01">🙂Wellcome to</span><span class="blink-02">Pedphairin Web.</span></h1>
+    </div>
+  <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
+<div class="container">
+  <a href="track.html" class="btn">
+  <svg width="277" height="62">
+    <defs>
+        <linearGradient id="grad1">
+            <stop offset="0%" stop-color="#FF8282"/>
+            <stop offset="100%" stop-color="#E178ED" />
+        </linearGradient>
+    </defs>
+     <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+  </svg>
+  <!--<span>Voir mes réalisations</span>-->
+    <span>CLICK ME NOW💖 💖 !</span>
+</a>
 </div>
-
   
   
   
@@ -83,64 +259,3 @@ font-family: 'Supermercado One', cursive;
 
 </html>
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-</head>
-<style>
-    body{background:black;
-margin-top:50px;
-margin-left:180px;}
-#typing {
-
-            width: 0ch;
-            color: white;
-            float: left;
-            font-family: 'Indie Flower', cursive;
-font-family: 'Oswald', sans-serif;
-font-family: 'Supermercado One', cursive;
-            font-weight:bold;
-            font-size: 35px;
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 10s steps(22) 1s infinite alternate;
-        }
-        #typing span{
-        color:red;}
-
-        #crow {
-            float:inline-start;
-
-      color: white;
-            font-family: consolas;
-            font-weight:bold;
-            font-size: 55px;
-            animation: crow 0.5s linear 0s infinite;
-        }
-        @keyframes typing {
-            from {
-                width: 5ch;
-            }
-            to {
-                width: 80ch;
-            }
-        }
-        @keyframes crow {
-            from {
-                opacity: 5;
-            }
-            to {
-                opacity: 55;
-            }
-        }
-</style>
-<body>
-    <div id="typing">this website I wrote for my sister to read.and understand Thai language  <p>
-         <span>IF in doubt You can ask me anytime I am happy to teach you 💖 🙂</span></p></div>
-<div id="crow">|</div>
-</body>
-</html>
